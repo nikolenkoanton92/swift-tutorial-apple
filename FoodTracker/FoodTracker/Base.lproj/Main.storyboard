@@ -46,6 +46,10 @@
                             <constraint firstItem="nx0-wx-5iE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="dxZ-oF-5wQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="meanNameLabel" destination="6N9-t1-xpY" id="fNx-8b-vg5"/>
+                        <outlet property="nameTextField" destination="HNm-GL-TUB" id="zja-I8-G2o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
