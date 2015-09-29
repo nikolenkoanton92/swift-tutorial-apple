@@ -35,6 +35,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bt8-Zh-9sr">
                                         <rect key="frame" x="0.0" y="51" width="151" height="30"/>
                                         <state key="normal" title="Set Default Label Text"/>
+                                        <connections>
+                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mi2-R7-zku"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -47,7 +50,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="meanNameLabel" destination="6N9-t1-xpY" id="fNx-8b-vg5"/>
+                        <outlet property="mealNameLabel" destination="6N9-t1-xpY" id="fes-id-nt0"/>
                         <outlet property="nameTextField" destination="HNm-GL-TUB" id="zja-I8-G2o"/>
                     </connections>
                 </viewController>
