@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,6 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // Dismiss the picker if the user canceled.
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         // The info dictionary contains multiple representations of the image, and this uses the original.

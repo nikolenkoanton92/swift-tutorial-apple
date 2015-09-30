@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -18,29 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nx0-wx-5iE">
-                                <rect key="frame" x="27" y="103" width="560" height="581"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nx0-wx-5iE">
+                                <rect key="frame" x="20" y="60" width="560" height="354.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6N9-t1-xpY">
-                                        <rect key="frame" x="0.0" y="0.0" width="84" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNm-GL-TUB">
-                                        <rect key="frame" x="0.0" y="21" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="560" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="tyS-A6-bht"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="tyS-A6-bht"/>
+                                            </mask>
+                                        </variation>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bt8-Zh-9sr">
-                                        <rect key="frame" x="0.0" y="51" width="151" height="30"/>
+                                        <rect key="frame" x="0.0" y="50" width="151" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="AFc-3G-shB"/>
+                                        </constraints>
                                         <state key="normal" title="Set Default Label Text"/>
                                         <connections>
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mi2-R7-zku"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="zBu-ex-muq">
-                                        <rect key="frame" x="0.0" y="81" width="333" height="500"/>
+                                        <rect key="frame" x="0.0" y="80" width="230" height="230"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.45000000000000001" height="0.59999999999999998"/>
                                         <gestureRecognizers/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
@@ -48,18 +58,58 @@
                                             <outletCollection property="gestureRecognizers" destination="znm-Dk-Rl8" appends="YES" id="AEO-at-W5m"/>
                                         </connections>
                                     </imageView>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="XBq-hK-IeF" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="310" width="240" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="Qrb-A7-NqS">
+                                        <rect key="frame" x="0.0" y="311" width="240" height="210"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="210" id="keJ-mf-DAm"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="keJ-mf-DAm"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HNm-GL-TUB" secondAttribute="trailing" id="WQJ-vr-kxn"/>
                                     <constraint firstItem="zBu-ex-muq" firstAttribute="top" secondItem="bt8-Zh-9sr" secondAttribute="bottom" constant="12" id="X99-S9-phG"/>
+                                    <constraint firstItem="Qrb-A7-NqS" firstAttribute="top" secondItem="zBu-ex-muq" secondAttribute="bottom" constant="448.5" id="iYH-ag-Plt"/>
+                                    <constraint firstItem="HNm-GL-TUB" firstAttribute="leading" secondItem="nx0-wx-5iE" secondAttribute="leading" id="rBg-jx-6Gf"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Qrb-A7-NqS"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="X99-S9-phG"/>
+                                        <exclude reference="iYH-ag-Plt"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="nx0-wx-5iE" secondAttribute="trailing" id="7aK-wy-TlN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nx0-wx-5iE" secondAttribute="bottom" id="M6g-6s-rtM"/>
                             <constraint firstItem="nx0-wx-5iE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="T2K-rx-7PM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nx0-wx-5iE" secondAttribute="trailing" id="Uy6-Aw-yLr"/>
                             <constraint firstItem="nx0-wx-5iE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="dxZ-oF-5wQ"/>
+                            <constraint firstItem="nx0-wx-5iE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="f8f-cc-xNI"/>
+                            <constraint firstItem="nx0-wx-5iE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="60" id="rzP-Nj-tyQ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7aK-wy-TlN"/>
+                                <exclude reference="T2K-rx-7PM"/>
+                                <exclude reference="dxZ-oF-5wQ"/>
+                                <exclude reference="M6g-6s-rtM"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="mealNameLabel" destination="6N9-t1-xpY" id="fes-id-nt0"/>
@@ -78,6 +128,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="defaultPhoto" width="333" height="500"/>
+        <image name="defaultPhoto" width="230" height="230"/>
     </resources>
 </document>
