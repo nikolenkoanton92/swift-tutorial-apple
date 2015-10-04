@@ -149,7 +149,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="E9Y-s1-QcV">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="TYM-QS-LAl"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="TYM-QS-LAl">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="0cX-v3-35d"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="hqb-xc-oxC">
                             <connections>
                                 <segue destination="Ael-l6-gDp" kind="unwind" unwindAction="unwindToMealList:" id="WBG-sM-t3N"/>
